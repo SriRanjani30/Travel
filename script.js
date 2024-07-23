@@ -48,3 +48,24 @@ document.getElementById('searchInput').addEventListener('input', function() {
         }
     });
 });
+
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    displayBookingDetails();
+});
+
+function displayBookingDetails() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const destination = document.getElementById('destination').value;
+    const date = document.getElementById('date').value;
+
+    document.getElementById('bookingName').textContent = name;
+    document.getElementById('bookingEmail').textContent = email;
+    document.getElementById('bookingDestination').textContent = destination;
+    document.getElementById('bookingDate').textContent = date;
+
+    document.getElementById('bookingDetails').style.display = 'block';
+
+    document.getElementById('bookingForm').reset();
+}
