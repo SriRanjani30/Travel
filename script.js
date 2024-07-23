@@ -22,3 +22,29 @@ function addReview() {
 
     document.getElementById('reviewForm').reset();
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+    document.getElementById('contactForm').reset();
+});
+
+document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for subscribing to our newsletter!');
+    document.getElementById('newsletterForm').reset();
+});
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    const searchValue = this.value.toLowerCase();
+    const destinations = document.querySelectorAll('.destination');
+
+    destinations.forEach(destination => {
+        const destinationName = destination.querySelector('h3').textContent.toLowerCase();
+        if (destinationName.includes(searchValue)) {
+            destination.style.display = 'block';
+        } else {
+            destination.style.display = 'none';
+        }
+    });
+});
