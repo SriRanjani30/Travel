@@ -14,22 +14,30 @@
                 <li><a href="#destinations">Destinations</a></li>
                 <li><a href="#booking">Book a Trip</a></li>
                 <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
     </header>
 
+    <section id="search">
+        <h2>Search Destinations</h2>
+        <input type="text" id="searchInput" placeholder="Search for a destination...">
+    </section>
+
     <section id="destinations">
         <h2>Popular Destinations</h2>
-        <div class="destination">
+        <div class="destination" data-country="france">
             <h3>Paris, France</h3>
             <img src="paris.jpg" alt="Paris">
             <p>The city of love, known for its culture, art, and fashion.</p>
         </div>
-        <div class="destination">
+        <div class="destination" data-country="japan">
             <h3>Tokyo, Japan</h3>
             <img src="tokyo.jpg" alt="Tokyo">
             <p>A city that blends tradition with futuristic technology.</p>
         </div>
+        <!-- Add more destinations as needed -->
     </section>
 
     <section id="booking">
@@ -70,6 +78,48 @@
             <button type="submit">Submit Review</button>
         </form>
     </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="contactName">Name:</label>
+            <input type="text" id="contactName" name="contactName" required>
+
+            <label for="contactEmail">Email:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How can I book a trip?</h3>
+            <p>You can book a trip using our booking form above. Simply fill in your details and choose your destination and travel date.</            </p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I cancel my booking?</h3>
+            <p>Yes, you can cancel your booking by contacting our support team through the contact form.</p>
+        </div>
+        <!-- Add more FAQs as needed -->
+    </section>
+
+    <section id="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <form id="newsletterForm">
+            <label for="newsletterEmail">Email:</label>
+            <input type="email" id="newsletterEmail" name="newsletterEmail" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
